@@ -1,0 +1,15 @@
+# OS files
+Thumbs.db
+.DS_Store
+
+# Editor files
+.vscode/
+.idea/
+
+# Generated / temporary files
+*.bak
+*.tmp
+*.log
+*.zip
+*.rar
+*.7z
