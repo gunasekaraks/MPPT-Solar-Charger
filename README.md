@@ -1,4 +1,4 @@
-# ☀️ Solar Charge Controller with Basic MPPT
+# ☀️ Solar Charge Controller with Basic MPPT (ongoing)
 
 Ongoing hardware design project for a modular solar charge controller with basic Maximum Power Point Tracking (MPPT). The system focuses on efficient DC-DC conversion, real-time sensing, and a scalable control architecture for renewable energy applications.
 
