@@ -3,10 +3,14 @@ Thumbs.db
 .DS_Store
 
 # Editor files
-.vscode/
 .idea/
 
 # Generated / temporary files
+.pio
+.vscode/.browse_c_cpp.db*
+.vscode/c_cpp_properties.json
+.vscode/launch.json
+.vscode/ipch
 *.bak
 *.tmp
 *.log
