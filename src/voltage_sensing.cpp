@@ -51,8 +51,8 @@ float VCM_BAT   = 1.42f;           // Chip-specific quiescent VOUTP -- calibrate
 
 const float ALPHA_PV  = 1.0f / 31.0f;   // PV divider ratio -- confirm against your board
 const float ALPHA_BAT = 1.0f / 31.0f;   // BAT divider ratio -- confirm against your board
-const float SCALE_PV  = 1.0f / (ALPHA_PV * GAIN_FACTOR);
-const float SCALE_BAT = 1.0f / (ALPHA_BAT * GAIN_FACTOR);
+const float SCALE_PV  = 1.0f / (ALPHA_PV );
+const float SCALE_BAT = 1.0f / (ALPHA_BAT);
 
 const float VREF      = 3.30f;   // Measure actual 3.3V rail for accuracy
 const int   V_SAMPLES = 16;      // Voltage channel averaging
@@ -113,7 +113,7 @@ float readSolarVoltage() {
 }
 
 float readBatVoltage() {
-  float v_adc = readAveragedAdc(BAT_V_PIN);
+  float v_adc = readAveragedAdc(BAT_V_PIN) + 0.1;
   float v_in  = (v_adc - VCM_BAT) / GAIN_FACTOR;
   if (v_in < 0) v_in = 0;
   return v_in * SCALE_BAT;
